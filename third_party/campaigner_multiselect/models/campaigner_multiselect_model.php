@@ -6,7 +6,7 @@
  * @author          Stephen Lewis (http://github.com/experience/)
  * @copyright       Experience Internet
  * @package         Campaigner_multiselect
- * @version         0.1.0
+ * @version         1.0.0
  */
 
 class Campaigner_multiselect_model extends CI_Model {
@@ -75,7 +75,7 @@ class Campaigner_multiselect_model extends CI_Model {
 
     $this->_package_version = $package_version
       ? $package_version
-      : '0.1.0';
+      : '1.0.0';
 
     $this->_extension_class = ucfirst($this->_package_name) .'_ext';
 
@@ -105,23 +105,6 @@ class Campaigner_multiselect_model extends CI_Model {
   public function get_package_name()
   {
     return $this->_package_name;
-  }
-
-
-  /**
-   * Returns the package theme folder URL, appending a forward slash if required.
-   *
-   * @access    public
-   * @return    string
-   */
-  public function get_package_theme_url()
-  {
-    $theme_url = $this->_ee->config->item('theme_folder_url');
-    $theme_url .= substr($theme_url, -1) == '/'
-      ? 'third_party/'
-      : '/third_party/';
-
-    return $theme_url .$this->get_package_name() .'/';
   }
 
 

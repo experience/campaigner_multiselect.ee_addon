@@ -78,7 +78,6 @@ class Campaigner_multiselect_model extends CI_Model {
       : '0.1.0';
 
     $this->_extension_class = ucfirst($this->_package_name) .'_ext';
- 
 
     // Initialise the add-on cache.
     if ( ! array_key_exists($this->_namespace, $this->_ee->session->cache))
@@ -282,4 +281,5 @@ class Campaigner_multiselect_model extends CI_Model {
 
 
 /* End of file      : campaigner_multiselect_model.php */
-/* File location    : third_party/campaigner_multiselect/models/campaigner_multiselect_model.php */
+/* File location    : third_party/campaigner_multiselect/models/
+ *                    campaigner_multiselect_model.php */

@@ -8,6 +8,8 @@
  * @package         Campaigner_multiselect
  */
 
+require_once PATH_THIRD .'campaigner/classes/campaigner_mailing_list.php';
+
 class Campaigner_multiselect_ext {
 
   private $_ee;
@@ -39,9 +41,9 @@ class Campaigner_multiselect_ext {
 
     $this->_model         = $this->_ee->campaigner_multiselect_model;
 
-    $this->description    = $this->_ee->lang('ext_description');
+    $this->description    = $this->_ee->lang->line('ext_description');
     $this->docs_url       = 'http://experienceinternet.co.uk/software/campaigner';
-    $this->name           = $this->_ee->lang('ext_name');
+    $this->name           = $this->_ee->lang->line('ext_name');
     $this->settings       = $settings;
     $this->settings_exist = 'n';
     $this->version        = $this->_model->get_package_version();
@@ -88,7 +90,29 @@ class Campaigner_multiselect_ext {
     Campaigner_mailing_list $mailing_list
   )
   {
-    
+    $trigger_field = $mailing_list->get_trigger_field();
+    $trigger_value = $mailing_list->get_trigger_value();
+
+    // No trigger field == success.
+    if ( ! $trigger_field)
+    {
+      return TRUE;
+    }
+
+    // No trigger value and no member field == success.
+    if ( ! $trigger_value && ! array_key_exists($trigger_field, $member_data))
+    {
+      return TRUE;
+    }
+
+    // Trigger field and no member field == failure.
+    if ( ! array_key_exists($trigger_field, $member_data))
+    {
+      return FALSE;
+    }
+
+    $member_trigger = explode("\n", $member_data[$trigger_field]);
+    return in_array($trigger_value, $member_trigger);
   }
 
 

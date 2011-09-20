@@ -1,0 +1,46 @@
+/**
+ * Campaigner Multi-Select control panel styles.
+ *
+ * @author          Stephen Lewis (http://github.com/experience/)
+ * @copyright       Experience Internet
+ * @package         Campaigner_multiselect
+ */
+
+@media screen {
+
+/* =input
+ * ------------------------------------------------------------ */
+#ei input[type='text'] {
+    width               : 97%;
+}
+
+
+/* =act
+ * ------------------------------------------------------------ */
+#ei .act {
+    padding-right       : 7px;
+    text-align          : right;
+    white-space         : nowrap;
+    width               : 44px;
+}
+
+
+/* =btn
+ * ------------------------------------------------------------ */
+#ei .btn {
+    display             : inline-block;
+    margin-right        : 3px;
+    vertical-align      : middle;
+}
+
+#ei .btn img {
+    display             : inline-block;
+    vertical-align      : middle;
+}
+
+
+} /* @media screen */
+
+
+/* End of file      : cp.css */
+/* File location    : themes/third_party/campaigner_multiselect/css/cp.css */

@@ -109,23 +109,6 @@ class Campaigner_multiselect_model extends CI_Model {
 
 
   /**
-   * Returns the package theme folder URL, appending a forward slash if required.
-   *
-   * @access    public
-   * @return    string
-   */
-  public function get_package_theme_url()
-  {
-    $theme_url = $this->_ee->config->item('theme_folder_url');
-    $theme_url .= substr($theme_url, -1) == '/'
-      ? 'third_party/'
-      : '/third_party/';
-
-    return $theme_url .$this->get_package_name() .'/';
-  }
-
-
-  /**
    * Returns the package version.
    *
    * @access  public

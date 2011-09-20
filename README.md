@@ -36,8 +36,8 @@ will contain `R` (which matches the stated trigger value), and the subscription
 will work.
 
 If the member likes red _and_ green, the `preferred_colors` field will contain
-something like R|G (I forget the actual value delimiter). This won't match the
-trigger value, so the subscription won't take place.
+something like "R\nG" (values are delimited by line breaks). This won't match
+the trigger value, so the subscription won't take place.
 
 ## The solution
 Campaigner MS solves this problem by registering with the

@@ -37,9 +37,11 @@ class Campaigner_multiselect_ext {
   public function __construct($settings = '')
   {
     $this->_ee =& get_instance();
-    $this->_ee->load->model('campaigner_multiselect_model');
 
-    $this->_model         = $this->_ee->campaigner_multiselect_model;
+    $this->_ee->load->model('campaigner_multiselect_model');
+    $this->_model = $this->_ee->campaigner_multiselect_model;
+
+    $this->_ee->lang->loadfile($this->_model->get_package_name());
 
     $this->description    = $this->_ee->lang->line('ext_description');
     $this->docs_url       = 'http://experienceinternet.co.uk/software/campaigner';

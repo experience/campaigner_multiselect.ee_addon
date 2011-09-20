@@ -11,8 +11,13 @@
 $lang = array(
 
   /* --------------------------------------------------------------
-   * REQUIRED
+   * EXTENSION
    * ------------------------------------------------------------ */
+
+  'ext_name'        => 'Campaigner Multi-Select',
+  'ext_description' => 'Implements the ability to use a custom member field
+                        containing an array of values as a Campaigner trigger
+                        field.',
 
   // All done.
   '' => ''
@@ -20,4 +25,5 @@ $lang = array(
 );
 
 /* End of file      : lang.campaigner_multiselect.php */
-/* File location    : third_party/campaigner_multiselect/language/english/lang.campaigner_multiselect.php */
+/* File location    : third_party/campaigner_multiselect/language/english/
+ *                    lang.campaigner_multiselect.php */

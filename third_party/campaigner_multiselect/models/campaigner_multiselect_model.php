@@ -6,7 +6,7 @@
  * @author          Stephen Lewis (http://github.com/experience/)
  * @copyright       Experience Internet
  * @package         Campaigner_multiselect
- * @version         0.1.0
+ * @version         1.0.0
  */
 
 class Campaigner_multiselect_model extends CI_Model {
@@ -75,7 +75,7 @@ class Campaigner_multiselect_model extends CI_Model {
 
     $this->_package_version = $package_version
       ? $package_version
-      : '0.1.0';
+      : '1.0.0';
 
     $this->_extension_class = ucfirst($this->_package_name) .'_ext';
 
